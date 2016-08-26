@@ -1,0 +1,30 @@
+// Switch to Delphi 2009+ mode.
+{$MODE DELPHIUNICODE}
+
+// Determine if this is a debug build.
+{$IFNDEF DEBUG}
+  {$IFOPT D+}
+    {$DEFINE DEBUG}
+  {$ENDIF}
+{$ENDIF}
+
+// Determine if the RTTI unit has been tested with this version of FPC and in
+// case it has, determine which features and workarounds to enable.
+{$IF (FPC_FULLVERSION >= 30000) AND (FPC_FULLVERSION < 30100)}
+  {$DEFINE RTTI_COMPILER_OK}
+  {$DEFINE RTTI_ENABLE_SYSTEM_TYPES_WORKAROUND}
+  {$DEFINE RTTI_INCLUDE_TYPE_EINVALIDOPEXCEPTION}
+  {$DEFINE RTTI_INCLUDE_TYPE_TARRAY}
+  {$DEFINE RTTI_INCLUDE_TYPE_TARRAYPROPINFO}
+  {$DEFINE RTTI_INCLUDE_TYPE_TATTRDATA}
+  {$DEFINE RTTI_INCLUDE_TYPE_TCUSTOMATTRIBUTE}
+  {$DEFINE RTTI_INCLUDE_TYPE_TMEMBERVISIBILITY}
+  {$DEFINE RTTI_INCLUDE_TYPE_TPARAMDATA}
+  {$DEFINE RTTI_INCLUDE_TYPE_TSYMBOLNAME}
+  {$DEFINE RTTI_INCLUDE_TYPE_TTYPEINFOFIELDACCESSOR}
+{$ENDIF}
+
+// Emit a warning if the RTTI unit has not been tested with this version of FPC.
+{$IFNDEF RTTI_COMPILER_OK}
+  {$WARNING The RTTI unit may not work with this version of the compiler}
+{$ENDIF}

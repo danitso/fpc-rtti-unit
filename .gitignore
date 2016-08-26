@@ -1,0 +1,32 @@
+# Directories
+
+debug/
+test/bin/
+test/lib/
+
+# File Extensions
+
+*.7z
+*.app
+*.bak
+*.bat
+*.bundle
+*.cmd
+*.compiled
+*.dll
+*.dylib
+*.exe
+*.gz
+*.log
+*.lps
+*.msi
+*.o
+*.obj
+*.pkg
+*.ppu
+*.rar
+*.sh
+*.so
+*.tar
+*.tmp
+*.zip

@@ -1,0 +1,1 @@
+TRttiStructuredType = class abstract(TRttiType);
