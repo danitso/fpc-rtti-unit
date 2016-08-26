@@ -1,6 +1,6 @@
 # FPC-RTTI-UNIT
 
-An implementation of Delphi's `System.Rtti` unit for Free Pascal.
+An implementation of Delphi's `RTTI` unit for Free Pascal.
 
 The unit is based entirely on the online documentation for Delphi's implementation. As such, the code may currently behave differently so please report any issues or inconsistencies you find.
 
